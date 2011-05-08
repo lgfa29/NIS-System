@@ -21,6 +21,7 @@ public class GoogleNewsWrapper implements Wrapper {
 	@Override
 	public void run(HttpServletRequest req, HttpServletResponse res)
 			throws Exception {
+		req.getSession().setAttribute("newsQuery", req.getParameter("newsQuery"));
 		RequestDispatcher rd = req.getRequestDispatcher("/wrappers/gnews.jsp");
 		rd.forward(req, res);
 	}
@@ -29,11 +30,11 @@ public class GoogleNewsWrapper implements Wrapper {
 		List<GoogleNews> results = new ArrayList<GoogleNews>();
 		String key = "ABQIAAAA0DmdZTFM-GXJ_5YuVOzTlBT83daVXoyKrbOHEVulBRA0Z5nqahSLDHPmk8-T4gOLxyijcCe6bnkdkQ";
 		String ip = req.getRemoteAddr();
-		String query = "topic=h";
+		String query = "q=" + req.getSession().getAttribute("newsQuery");
 		
 		URL url = new URL(
 				"https://ajax.googleapis.com/ajax/services/search/news?"
-						+ "v=1.0&"+query+"&key="+key+"&userip="+ip);
+						+ "v=1.0&"+query.replace(" ", "%20")+"&key="+key+"&userip="+ip+"&rsz=8");
 		URLConnection connection = url.openConnection();
 		connection.addRequestProperty("Referer",
 				"http://110.76.95.177:8080/nis/");
