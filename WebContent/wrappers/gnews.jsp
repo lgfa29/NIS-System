@@ -13,6 +13,11 @@
 
 </head>
 <body>
+
+<div id="header" style="margin-left:-4%;">
+	<h1>NIS - News Integrating System</h1>
+</div>
+
 <ol>
 <%
 	for(GoogleNews gnews : GoogleNewsWrapper.getTopNews(request))
