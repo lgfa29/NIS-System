@@ -75,7 +75,7 @@ public class LoadNewsWrapper implements Wrapper {
 		String line;
 		
 		while((line = in.readLine()) != null){
-			if(!line.contains("jquery") && !line.contains("jQuery"))
+			if(!(line.contains("jquery") || line.contains("jQuery")))
 				out.println(line);
 			
 			if(line.contains("<head"))

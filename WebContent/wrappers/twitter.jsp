@@ -8,8 +8,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="css.css" type="text/css" media="screen" />
+
 </head>
-<body>
+<body style="margin: 0">
 	<table>
 <%
 	String query = (String) session.getAttribute("query");
