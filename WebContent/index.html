@@ -1,111 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		
-		<script type="text/javascript" src="js/jquery-1.4.2.js"></script>	
-		<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-		<script type="text/javascript" src="js/jquery.hotkeys.js"></script>
-		
-		<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-		
-		<title>Title</title>
-	</head>
-	<body>
-		<script type="text/javascript">
-			function init(){
-				$("a#menu").fancybox({
-					'type':'iframe', 
-					'width':650,
-					'height':400
-				});
-				
-				jQuery(document).bind('keydown', 'Ctrl+q',function (evt){
-					var txt = '';
-					
-				    if (window.getSelection)
-				        txt = window.getSelection();
-				    else if (document.getSelection)
-				        txt = document.getSelection();
-				    else if (document.selection)
-				        txt = document.selection.createRange().text;
-			        
-					$.ajax({
-						type:"GET",
-						url:"saveQuery",
-						data:"query="+txt,
-						success:function(){
-							$("a#menu").trigger('click');
-						}
-					});
-				});
-			}
-			
-			$(document).ready(init);
-		</script>
-		
-		<div style="visibility: hidden">
-			<a id="menu" href="menu.html">Menu</a>
-		</div>
-		
-<h1>Nation&rsquo;s Mood at Lowest Level in Two Years, Poll Shows</h1>		
-<p>
-Americans are more pessimistic about the nation&rsquo;s economic outlook and overall direction than they have been at any time since <a href="http://topics.nytimes.com/top/reference/timestopics/people/o/barack_obama/index.html?inline=nyt-per" title="More articles about Barack Obama." class="meta-per">President Obama</a>&rsquo;s first two months in office, when the country was still officially ensnared in the Great Recession, according to the latest New York Times/CBS News poll.        </p>
-<p>
-Amid rising gas prices, stubborn unemployment and a cacophonous debate in Washington over the federal government&rsquo;s ability to meet its future obligations, the poll presents stark evidence that the slow, if unsteady, gains in public confidence earlier this year that a recovery was under way are now all but gone.        </p>
-<p>
-Capturing what appears to be an abrupt change in attitude, the survey shows that the number of Americans who think the economy is getting worse has jumped 13 percentage points in just one month. Though there have been encouraging signs of renewed growth since last fall, many economists are having second thoughts, warning that the pace of expansion might not be fast enough to create significant numbers of new jobs.        </p>
-<p>
-The dour public mood is dragging down ratings for both parties in Congress and for President Obama, the poll found.        </p>
-<p>
-After the first 100 days of divided government, and a new Republican leadership controlling the House of Representatives, 75 percent of respondents disapproved of the way Congress is handling its job.        </p>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>NIS</title>
+</head>
+<body>
 
-<p>
-Disapproval of Mr. Obama&rsquo;s handling of the economy has never been broader &mdash; at 57 percent of Americans &mdash; a warning sign as he begins to set his sights on re-election in 2012. And a similar percentage disapprove of how Mr. Obama is handling the <a href="http://topics.nytimes.com/top/reference/timestopics/subjects/f/federal_budget_us/index.html?inline=nyt-classifier" title="Recent and archival news about the federal budget." class="meta-classifier">federal budget</a> deficit, though more disapprove of the way Republicans in Congress are.        </p>
-<p>
-Still, for all the talk from Congressional Republicans and Mr. Obama of cutting the deficit as a way to improve the economy, only 29 percent of respondents said it would create more jobs. Twenty-seven percent said it would have no effect on the employment outlook, and 29 percent said it would cost jobs.        </p>
-<p>
-When it comes to cutting the deficit and the costs of the nation&rsquo;s costliest entitlement programs, the poll found conflicting and sometimes contradictory views, with hints of encouragement and peril for both parties.        </p>
-
-<p>
-Mr. Obama has considerable support for his proposal to end tax cuts for those households earning $250,000 a year and more: 72 percent of respondents approved of doing so as a way to address the deficit.        </p>
-<p>
-And, in what he can take as a positive sign for his argument the nation has a duty to protect its most vulnerable citizens, about three-quarters of Americans polled think the federal government has a responsibility to provide health care for the elderly, and 56 percent believe it has a similar duty to the poor.        </p>
-<p>
-&ldquo;Keep people&rsquo;s taxes and give them medical benefits,&rdquo; Richard Sterling, an independent voter of Naugatuck, Conn., said in a follow-up interview.        </p>
-<p>
-In what Republicans can take as a positive sign as they seek a more limited government, 55 percent of poll respondents said they would rather have fewer services from a smaller government than more services from a bigger one, as opposed to 33 percent who said the opposite, a continuation of a trend in Times/CBS polls.        </p>
-<p>
-And slightly more Americans approve than disapprove of a proposal by Representative <a href="http://topics.nytimes.com/top/reference/timestopics/people/r/paul_d_ryan/index.html?inline=nyt-per" title="More articles about Paul D. Ryan." class="meta-per">Paul D. Ryan</a> of Wisconsin to change <a href="http://topics.nytimes.com/top/news/health/diseasesconditionsandhealthtopics/medicare/index.html?inline=nyt-classifier" title="Recent and archival health news about Medicare." class="meta-classifier">Medicare</a> from a program that pays doctors and hospitals directly for treating older people to one in which the government helps such patients pay for private plans, though that support derived more from Republicans and independents. A recent Washington Post/ABC News poll that found 65 percent opposed Mr. Ryan&rsquo;s plan, suggesting results can vary based on how the question is asked.        </p>
-
-<p>
-Twice as many respondents said they would prefer cuts in spending on federal programs that benefit people like them as said they would favor a rise in taxes to pay for such programs.        </p>
-<p>
-Yet more than 6 in 10 of those surveyed said they believed Medicare was worth the costs. And when asked specifically about Medicare, respondents said they would rather see higher taxes than see a reduction in its available medical services if they had to choose between the two.        </p>
-<p>
-Given the choice of cutting military, <a href="http://topics.nytimes.com/top/reference/timestopics/subjects/s/social_security_us/index.html?inline=nyt-classifier" title="More articles about Social Security." class="meta-classifier">Social Security</a> or Medicare spending as a way to reduce the overall budget, 45 percent chose military cuts, compared with those to Social Security (17 percent) or Medicare (21 percent.)        </p>
-<p>
-The opposition by <a href="http://topics.nytimes.com/top/reference/timestopics/subjects/t/tea_party_movement/index.html?inline=nyt-classifier" title="More articles about the Tea Party movement." class="meta-classifier">Tea Party</a> supporters to raising the level of debt the nation can legally carry was shared by nearly two-thirds of poll respondents, including nearly half of Democrats; administration officials say blocking the government from raising that limit could force it to default on its debt payments.        </p>
-
-<p>
-For the most part, Americans split sharply along party lines when it comes to whom they trust most on the deficit, Medicare and Social Security.        </p>
-<p>
-But with 70 percent of poll respondents saying that the country was heading in the wrong direction, the public was not exhibiting warm feelings toward officeholders of either party.        </p>
-<p>
-Most Americans think neither Mr. Obama nor the Congressional Republicans share their priorities for the country. Mr. Obama&rsquo;s job approval remains below a majority, with 46 percent saying they approve of his performance in office, while 45 percent do not. And support for his handling of the military campaign in Libya has fallen since last month: 39 percent approve and 45 percent disapprove. In a CBS poll in March, 50 percent approved and 29 percent disapproved.        </p>
-<p>
-Republicans have their own challenges. More than half of poll respondents, 56 percent, said they did not have a favorable view of the party, as opposed to 37 percent who said they did. (The <a href="http://topics.nytimes.com/top/reference/timestopics/organizations/d/democratic_party/index.html?inline=nyt-org" title="More articles about Democratic Party" class="meta-org">Democratic Party</a> fared somewhat better: 49 percent did not have favorable views of it and 44 percent did.)        </p>
-<p>
-
-As the House speaker, Representative <a href="http://topics.nytimes.com/top/reference/timestopics/people/b/john_a_boehner/index.html?inline=nyt-per" title="More articles about John A. Boehner." class="meta-per">John A. Boehner</a> of Ohio, becomes the face of his party in Congress, more disapprove of his job performance (41 percent) than approve of it (32 percent); 27 percent said they did not have an opinion of him.        </p>
-<p>
-The displeasure with officeholders of both parties is reminiscent of the mood that prevailed in November, when anti-incumbent sentiment swept Democrats out of power in the House and diminished their edge in the Senate.        </p>
-<p>
-Frustration with the pace of economic growth has grown since, with 28 percent of respondents in a New York Times/CBS poll in late October saying the economy was getting worse, and 39 percent saying so in the latest poll. &ldquo;They&rsquo;re saying it will get better, but it&rsquo;s not,&rdquo; Frank Tufenkdjian, a Republican of Bayville, N.Y., said in a follow-up interview. &ldquo;I know so many people who are unemployed and can&rsquo;t find a job.&rdquo;        </p>
-
-<p>
-The nationwide telephone survey was conducted Friday through Wednesday with 1,224 adults and has a margin of sampling error of plus or minus three percentage points.        </p>
-		
-
-	</body>
+<form action="controller" method="post">
+	<input type="text" />
+	<input type="submit" value="Search" />
+	<input type ="hidden" name="wrapper" value="GoogleNewsWrapper" />
+</form>
+</body>
 </html>

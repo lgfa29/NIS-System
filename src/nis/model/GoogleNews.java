@@ -1,17 +1,10 @@
 package nis.model;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-
 public class GoogleNews {
 	private String title;
 	private String url;
 	private String publisher;
-	private Date publishedDate;
-	private String publishedDateStr;
+	private String publishedDate;
 	private String content;
 	
 	public GoogleNews(
@@ -22,13 +15,7 @@ public class GoogleNews {
 		this.url = url;
 		this.publisher = publisher;
 		
-		this.publishedDateStr = publishedDate;
-		
-		try {
-			this.publishedDate = DateFormat.getInstance().parse(publishedDate);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		this.publishedDate = publishedDate;
 		this.content = content;
 	}
 
@@ -45,16 +32,7 @@ public class GoogleNews {
 	}
 
 	public String getPublishedDate() {
-		/*Calendar cal = new GregorianCalendar();
-		cal.setTime(publishedDate);
-		String date = 
-			Integer.toString(cal.get(Calendar.MONTH)) + "/" + 
-			Integer.toString(cal.get(Calendar.DAY_OF_MONTH)) + "/" +
-			Integer.toString(cal.get(Calendar.YEAR)) + "-" +
-			Integer.toString(cal.get(Calendar.HOUR)) + ":" +
-			Integer.toString(cal.get(Calendar.MINUTE));*/
-		
-		return publishedDateStr;
+		return publishedDate;
 	}
 
 	public String getContent() {

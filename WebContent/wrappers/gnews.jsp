@@ -16,7 +16,7 @@
 	{
 %>
 		<li>
-			<a href="<%= gnews.getUrl() %>" target="_blank">
+			<a href="controller?url=<%= gnews.getUrl() %>&wrapper=LoadNewsWrapper">
 				<%= gnews.getTitle() %>
 			</a> - <%= gnews.getPublisher() %> (<%= gnews.getPublishedDate() %>)
 			<p>
