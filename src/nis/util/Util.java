@@ -1,7 +1,6 @@
 package nis.util;
 
-public class Util {
-
+public class Util {	
 	public static String parseLinks(String inputText) {
 		StringBuilder str = new StringBuilder();
 		String[] array = inputText.split(" ");

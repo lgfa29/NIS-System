@@ -53,7 +53,7 @@ public class LoadNewsWrapper implements Wrapper {
 		"</script>\n" +
 		
 		"<div style=\"visibility: hidden\">\n" +
-			"<a id=\"menu\" href=\"menu.html\">Menu</a>\n" +
+			"<a id=\"menu\" href=\"menu.jsp\">Menu</a>\n" +
 		"</div>\n";
 	
 	@Override

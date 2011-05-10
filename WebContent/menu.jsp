@@ -6,19 +6,77 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <style type="text/css">
-	#container {
-		height: 380px;
+
+/* Basic structure */
+	#container{
+		height: 400px;
+		/*background-color: Red;*/
 	}
-	#content {
+	#left{
 		float: left;
-	  	border-left: solid 1px #AAA;
-	  	width: 500px;
-	  	height: 100%;
+		width: 120px;
+		height: 100%;
+		margin-right: 10px;
+		/*background-color: aqua;*/
 	}
-	#navbar {
-	  	float: left;
-	  	width: 100px;
-	  	margin-right: 10px;
+	#logo{
+		height: 50px;
+		/*background-color: Blue;*/
+	}
+	#menu{
+		/*background-color: Green;*/
+	}
+	#right{
+		height: 100%;
+		padding-left: 130px;
+		/*background-color: purple;*/
+	}
+	#header{
+		height: 50px;
+		/*background-color: fuchsia;*/
+	}
+	#content{
+		height: 320px;
+		/*background-color: lime;*/
+	}
+
+/* Elements */
+	/* Logo */
+	#logo h1{
+		margin: 0;
+		font-size: 32pt;
+		text-align: center;
+		position: relative;
+		top: -2px;
+	}
+	
+	/* Menu */
+	#menu ul {
+		margin: 0;
+		list-style-type: none;
+		padding: 0;
+	}
+	
+	/* Menu Buttons */
+	#menu li{
+		font-size: 14pt;
+		font-variant: small-caps;
+		padding: 5px;
+		margin: 2px;
+		text-decoration: none;
+		text-align: center;
+		background-color: RoyalBlue;
+	}
+	#menu li:hover{
+		background-color: Red;
+	}
+	#menu a{
+		text-decoration: none;
+		color: #fff;
+	}
+	
+	#header h1, p{
+		margin: 0;
 	}
 </style>
 
@@ -33,35 +91,28 @@
 <title>Insert title here</title>
 </head>
 <body style="margin: 0;">
-
-	<div style="float:left;width:100px;">
-		<ul style="list-style-type: none; padding: 0">
-	  		<li><a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')">Twitter</a></li>
-	  		<li><a href="#" target="iframe" onclick="updateHeader('Wikipedia')">Wikipedia</a></li>
-	  	</ul>
-	</div>
-	<div id="container" style="float:left;">
-		<div id="header">
-			<div style="margin-bottom: 10px;">
-				<h2 style="margin:0;"><%= (String) session.getAttribute("query") %></h2>
-				<p style="margin:0;" id="wrapper">&nbsp;</p>
+	
+	<div id="container">
+		<div id="left">
+			<div id="logo">
+				<h1>NIS</h1>
+			</div>
+			<div id="menu">
+				<ul>
+			  		<li><a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')">Twitter</a></li>
+			  		<li><a href="##" target="iframe" onclick="updateHeader('Wikipedia')">Wikipedia</a></li>
+	  			</ul>
 			</div>
 		</div>
-		<div id="content">
-			<iframe name="iframe" frameborder="0" style="width: 100%; height: 100%"></iframe>
+		<div id="right">
+			<div id="header">
+				<h1><%= (String) session.getAttribute("query") %></h1>
+				<p id="wrapper">&nbsp;</p>
+			</div>
+			<div id="content">
+				<iframe name="iframe" frameborder="0" style="width: 99.2%; height: 340px"></iframe>
+			</div>
 		</div>
 	</div>
-	
-	<!-- 
-	<div id="container">
-	  <div id="navbar">
-	  	<ul style="list-style-type: none; padding: 0">
-	  		<li><a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')">Twitter</a></li>
-	  	</ul>
-	  </div>
-	  <div id="content">
-		<iframe name="iframe" frameborder="0" style="width: 100%; height: 100%"></iframe>
-		</div>
-	</div> -->
 </body>
 </html>
