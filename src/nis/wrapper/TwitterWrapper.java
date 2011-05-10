@@ -6,6 +6,8 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import nis.util.Util;
+
 import twitter4j.Query;
 import twitter4j.QueryResult;
 import twitter4j.Tweet;
@@ -35,5 +37,26 @@ public class TwitterWrapper implements Wrapper {
 		else
 			return null;
 		
+	}
+	
+	public static String getParsedTweet(String tweet, String selectedWord) {
+		String[] array = Util.parseLinks(tweet).split(" ");
+		StringBuilder parsed = new StringBuilder();
+		
+		for(String word : array){
+			if(word.startsWith("@"))
+				parsed.append(" <a href=\"http://twitter.com/#!/" + word.substring(1).replaceAll("[ \t\r\n.:,]", "") + "\" target=\"_blank\">" + word + "</a>");
+			else if(selectedWord.toLowerCase().contains(word.toLowerCase())){
+				for(String keyword : selectedWord.split(" "))
+					if(word.equalsIgnoreCase(keyword))
+						parsed.append(" <b>" + word + "</b>");
+			}
+			else
+				parsed.append(" " + word);
+		}
+		
+		//String bold = parsed.toString().replaceAll(selectedWord, "<b>" + selectedWord + "</b>");
+		
+		return parsed.toString();
 	}
 }

@@ -23,10 +23,8 @@
 					<img src="<%= tweet.getProfileImageUrl() %>" style="width: 48px; height: 48px;" />
 				</td>
 				<td>
-					<a href="http://twitter.com/<%= tweet.getFromUser() %>" target="_blank">
-						<%= tweet.getFromUser() %>
-					</a>
-					<%= tweet.getText() %>
+					<a href="http://twitter.com/<%= tweet.getFromUser() %>" target="_blank"><%= tweet.getFromUser() %></a>
+					<%= TwitterWrapper.getParsedTweet(tweet.getText(), query) %>
 				</td>
 			</tr>
 <%
