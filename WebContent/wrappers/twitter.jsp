@@ -4,7 +4,8 @@
 
 <%@page import="nis.wrapper.TwitterWrapper"%>
 <%@page import="twitter4j.Tweet"%>
-<html>
+
+<%@page import="nis.util.Util"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
@@ -19,12 +20,12 @@
 	for(Tweet tweet : TwitterWrapper.search(query)){
 %>
 			<tr>
-				<td>
+				<td style="padding: 5px 0">
 					<img src="<%= tweet.getProfileImageUrl() %>" style="width: 48px; height: 48px;" />
 				</td>
 				<td>
 					<a href="http://twitter.com/<%= tweet.getFromUser() %>" target="_blank"><%= tweet.getFromUser() %></a>
-					<%= TwitterWrapper.getParsedTweet(tweet.getText(), query) %>
+					<%= TwitterWrapper.getParseTweet(tweet.getText(), query) %>
 				</td>
 			</tr>
 <%
