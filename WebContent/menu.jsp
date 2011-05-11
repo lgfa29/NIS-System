@@ -16,23 +16,23 @@
 		float: left;
 		width: 120px;
 		height: 100%;
-		margin-right: 10px;
-		/*background-color: aqua;*/
+		background-color: #708090;
 	}
 	#logo{
 		height: 50px;
-		/*background-color: Blue;*/
+		background-color: #fff;
 	}
 	#menu{
 		/*background-color: Green;*/
 	}
 	#right{
 		height: 100%;
-		padding-left: 130px;
+		padding-left: 140px;
 		/*background-color: purple;*/
 	}
 	#header{
 		height: 50px;
+		border-bottom: 1px solid #000;
 		/*background-color: fuchsia;*/
 	}
 	#content{
@@ -65,16 +65,17 @@
 		margin: 2px;
 		text-decoration: none;
 		text-align: center;
-		background-color: RoyalBlue;
+		background-color: #6495ed;
 	}
 	#menu li:hover{
-		background-color: Red;
+		background-color: #4682b4;
 	}
 	#menu a{
 		text-decoration: none;
 		color: #fff;
 	}
 	
+	/* Header */
 	#header h1, p{
 		margin: 0;
 	}
@@ -99,8 +100,8 @@
 			</div>
 			<div id="menu">
 				<ul>
-			  		<li><a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')">Twitter</a></li>
-			  		<li><a href="##" target="iframe" onclick="updateHeader('Wikipedia')">Wikipedia</a></li>
+			  		<a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')"><li>Twitter</li></a>
+			  		<a href="##" target="iframe" onclick="updateHeader('Wikipedia')"><li>Wikipedia</li></a>
 	  			</ul>
 			</div>
 		</div>
@@ -110,7 +111,7 @@
 				<p id="wrapper">&nbsp;</p>
 			</div>
 			<div id="content">
-				<iframe name="iframe" frameborder="0" style="width: 99.2%; height: 340px"></iframe>
+				<iframe name="iframe" style="width: 99.1%; height: 340px; border: 0;"></iframe>
 			</div>
 		</div>
 	</div>
