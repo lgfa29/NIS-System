@@ -25,7 +25,8 @@ public class LoadNewsWrapper implements Wrapper {
 				"jQuery(\"a#menu\").fancybox({\n" +
 					"'type':'iframe',\n" + 
 					"'width':650,\n" +
-					"'height':400\n" +
+					"'height':400,\n" +
+					"'scrolling':'no'\n" +
 				"});\n" +
 				
 				"jQuery(document).bind('keydown', 'Ctrl+q',function (evt){\n" +

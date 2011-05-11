@@ -101,7 +101,7 @@
 			<div id="menu">
 				<ul>
 			  		<a href="controller?wrapper=TwitterWrapper" target="iframe" onclick="updateHeader('Twitter')"><li>Twitter</li></a>
-			  		<a href="##" target="iframe" onclick="updateHeader('Wikipedia')"><li>Wikipedia</li></a>
+			  		<a href="#" onclick="updateHeader('Wikipedia')"><li>Wikipedia</li></a>
 	  			</ul>
 			</div>
 		</div>
@@ -111,7 +111,7 @@
 				<p id="wrapper">&nbsp;</p>
 			</div>
 			<div id="content">
-				<iframe name="iframe" style="width: 99.1%; height: 340px; border: 0;"></iframe>
+				<iframe name="iframe" style="width: 99.1%; height: 350px; border: 0;"></iframe>
 			</div>
 		</div>
 	</div>
