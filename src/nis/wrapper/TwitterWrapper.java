@@ -45,11 +45,11 @@ public class TwitterWrapper implements Wrapper {
 		
 		for(String word : array){
 			if(word.startsWith("@")){
-				parsed.append(" <a href=\"http://twitter.com/#!/" + word.substring(1).replaceAll("[ \t\r\n.:,]", "") + "\" target=\"_blank\">" + word + "</a>");
+				parsed.append(" <a href=\"http://twitter.com/#!/" + Util.removePunctuation(word.substring(1)) + "\" target=\"_blank\">" + word + "</a>");
 			}
 			else if(selectedWord.toLowerCase().contains(word.toLowerCase())){
 				for(String keyword : selectedWord.split(" ")){
-					if(word.equalsIgnoreCase(keyword))
+					if(Util.removePunctuation(word).equalsIgnoreCase(Util.removePunctuation(keyword)))
 						parsed.append(" <b>" + word + "</b>");
 				}
 			}
