@@ -1,0 +1,264 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+border: 0;
+margin: 0;
+}
+
+img
+{
+border: 0px;
+}
+
+
+a{
+	color: #264FA4;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #264FA4;
+}
+
+body{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	background: url(images/bg.jpg);
+	line-height:20px;
+}
+
+#main{
+	width: 999px;
+	margin: 0px auto;
+	padding: 0px 0px 0px 0px;
+	background: #B2B3B3;
+	border-left: 2px solid #FFFFFF;
+	border-right: 2px solid #FFFFFF;
+	
+}
+
+
+#header { width:999px;
+padding: 0px 0px 0px 0px;
+height: 428px;
+background:url(images/header.jpg) left top no-repeat;
+}
+
+#logo {	
+		padding: 28px 0px 0px 704px;
+		height: 328px;
+		text-align: center
+}
+
+#logo H1
+{
+		font-family:Georgia, "Times New Roman", Times, serif;
+		color:#FFFFFF;
+		font-size:18px;
+		font-style:italic;
+		text-decoration: none;
+		background: none;
+		padding: 0px;
+		margin: 0px;
+}
+
+#logo H2 a
+{
+font-family:Georgia, "Times New Roman", Times, serif;
+		color:#FFFFFF;
+		font-size:14px;
+		font-style:italic;
+		text-decoration: none;
+		background: none;
+}
+
+#logo H2
+{
+		background: none;
+		padding: 0px;
+		margin: 0px;
+}
+
+#buttons{
+	margin-top: 35px;
+	width: 983px;
+	height: 150px;
+	background: url(images/menu.jpg) left top no-repeat;
+	text-align:center;
+	margin-left: 8px;
+}
+
+#buttons ul {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	font-weight:normal;
+	display: block;
+	float: left;
+	width: 800px;
+	height: 42px;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-top: 22px;
+	padding-left: 0px;
+	margin-left: 100px;
+	text-align: center;
+}
+
+#buttons li {
+	display: inline;
+}
+
+#buttons a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight:normal;
+	display: block;
+	float: left;
+	width: 170px;
+	height: 42px;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-top: 22px;
+	padding-left: 0px;
+	margin-left: 15px;
+	text-align: center;
+	background:url(images/fish_but.gif) 0px 19px no-repeat;	
+}
+
+#buttons a:hover {
+	text-decoration: underline;
+	background: url(images/but_over.png) 0px 2px repeat-x;
+}
+
+#content{
+	width: 983px;
+	padding: 50px 0px 0px 0px;
+	margin: 0px 8px 0px 8px;
+	text-align: center;
+}
+
+#cont_top {	
+width: 983px;
+height:10px;
+margin-left: 8px;}
+
+#cont_bot {	
+width: 983px;
+height:10px;
+margin-left: 8px;}
+
+#left{
+	width: 697px;
+	margin: 0px 0px 0px 8px;
+	float: left;
+}
+
+.text{
+	padding: 10px 0px 0px 0px;
+}
+
+.img {	float:left;
+		margin: 5px 18px 5px 9px;
+}
+
+span {	color:#1380BA;
+		font-weight:bold;
+}
+
+.dat { text-decoration:underline;}
+
+#col_l {float:left;
+		width:342px;}
+
+#col_r {float: left;
+		width:345px;
+		margin-left:10px}
+
+H1{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:normal;
+	color: #1380BA;
+	padding-bottom: 5px;
+	text-align:center;
+	background: url(images/tit.gif) bottom repeat-x;
+}
+
+H2{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:normal;
+	color: #1380BA;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	text-align: left;
+}
+
+.read{
+	text-align:right;
+	padding-right:10px;
+	padding-top: 5px;
+	font-weight:bold;
+}
+
+.read_pap{
+	text-align:right;
+	padding-right:0px;
+	font-weight:bold;
+}
+
+
+#right{
+float:right;
+width: 231px;
+background: url(images/bg_left.jpg) left 25px repeat-x;
+margin-left: 8px;
+padding: 0px 18px 0px 10px;
+}
+
+
+
+#right ul 
+{
+	list-style: none;
+	padding-left:0px;
+	padding-top:0px;
+	margin: 0px;
+	display:block;
+	padding-bottom: 0px;
+}
+
+#right li{
+	padding-top: 9px;
+	background: url(images/fish.gif) 3px 16px no-repeat;
+	padding-left: 43px;
+}
+
+#footer{
+	height: 56px;
+	width: 1000px;
+	font-size: 10px;
+	color: #FFFFFF;
+	padding-top: 8px;
+	text-align: center;
+	clear:both;
+	padding: 17px 0px 0px 0px;
+}
+
+#footer a{
+	color: #FFFFFF;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#footer a:hover{
+	color: #FFFFFF;
+	font-size: 10px;
+	text-decoration: underline;
+}
