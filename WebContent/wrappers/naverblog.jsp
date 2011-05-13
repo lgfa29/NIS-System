@@ -19,7 +19,9 @@
 %>
 		<a href="<%= blog.getUrl() %>" target="_blank"><%= blog.getTitle() %></a><br />
 		<%= blog.getContent() %><br />
-		<%= blog.getName() %> - <a href="<%= blog.getBlogUrl() %>"><%= blog.getBlogUrl() %></a>
+		<span style="font-size: 9pt; color:SteelBlue;">
+			<%= blog.getName() %> - <a href="<%= blog.getBlogUrl() %>"><%= blog.getBlogUrl() %></a>
+		</span>
 		<br /><br />
 <%
 	}

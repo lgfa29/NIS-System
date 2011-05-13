@@ -16,7 +16,7 @@
 		float: left;
 		width: 120px;
 		height: 100%;
-		background-color: #708090;
+		/*background-color: #708090;*/
 	}
 	#logo{
 		height: 50px;

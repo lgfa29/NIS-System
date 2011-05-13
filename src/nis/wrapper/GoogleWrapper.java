@@ -55,7 +55,7 @@ public class GoogleWrapper implements Wrapper{
 			String api_key = "ABQIAAAAP1XL8Yhp9bEpLQTz4ER6KRRD1n4MOWjGUMHzB8_565bG7c1J0xR3M7K1mMsJWe1BHOlxfjJM0EENng";
 			
 			String address = "https://ajax.googleapis.com/ajax/services/search/web?v=1.0"
-				+ "&q=" + searchText + "&key=" + api_key + "&userip=" + user_ip
+				+ "&q=" + searchText.replaceAll(" ", "%20") + "&key=" + api_key + "&userip=" + user_ip
 				+ "&hl=en&rsz=8";
 			//System.out.println(address);
 			URLConnection uc = new URL(address).openConnection();
