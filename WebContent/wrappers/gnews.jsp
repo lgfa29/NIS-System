@@ -11,6 +11,11 @@
 
 <link rel="stylesheet" href="css.css" type="text/css" media="screen" />
 
+<style type="text/css">
+body{
+	margin: 0 5%;
+}
+</style>
 </head>
 <body>
 
