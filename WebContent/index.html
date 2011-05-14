@@ -1,23 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NIS</title>
-
-<link rel="stylesheet" href="css/css.css" type="text/css" media="screen" />
-
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>NIS System Homepage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-<div id="container" style="margin-top: 70px; text-align: center;">
-<div id="header" style="margin-bottom: 20px;">
-	<h1 style="font-size: 150px; margin:0;">NIS</h1>
+<div id="main">
+<!-- header begins -->
+<div id="header">
+	<div id="logo"></div>
+    <div id="buttons">
+        <ul>NEWS Information System</ul>
+    </div>
 </div>
-<form action="controller" method="post">
-	<input type="text" name="newsQuery" style="font-size: 24pt; font-family: serif; text-align: right" />
-	<input type="submit" value="Search" style="font-size: 16pt; padding: 5px; position: relative; top: -4px; width: 100px;" />
-	<input type ="hidden" name="wrapper" value="GoogleNewsWrapper" />
-</form>
+<!-- header ends -->
+    <!-- content begins -->
+    <div id="cont_top"></div>
+    <div id="content" >
+		<form action="controller" method="post">
+		<input type="text" name="newsQuery" size="50px" style="font-size: 15pt; font-family: serif; text-align: right" />
+		<input type="submit" value="News Search" style="font-size: 15pt; font-family:times;" />
+		<input type ="hidden" name="wrapper" value="GoogleNewsWrapper" />
+		</form>
+
+        	<div id="left">
+            </div>
+		<div id="right">
+			<br />
+      </div>
+        	<div style="clear: both"><img src="images/spaser.gif" alt="" width="1" height="1" /></div>
+    </div>
+    <!-- content ends -->
+    <div id="cont_bot"></div>
+    <!-- footer begins -->
+    <div id="footer">
+	</div>
+<!-- footer ends -->
 </div>
 </body>
 </html>
