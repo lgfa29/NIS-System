@@ -13,7 +13,7 @@
 <!-- header begins -->
 <div id="header">
 	<div id="logo"></div>
-    <div id="buttons">
+    <div id="buttons" style="margin-top:0;">
         <ul>NEWS Information System</ul>
     </div>
 </div>
@@ -21,10 +21,10 @@
     <!-- content begins -->
     <div id="cont_top"></div>
     <div id="content" >
-		<form action="controller" method="post">
-		<input type="text" name="newsQuery" size="50px" style="font-size: 15pt; font-family: serif; text-align: right" />
-		<input type="submit" value="News Search" style="font-size: 15pt; font-family:times;" />
-		<input type ="hidden" name="wrapper" value="GoogleNewsWrapper" />
+		<form action="controller" method="get">
+			<input type="text" name="newsQuery" size="50px" style="font-size: 15pt; font-family: serif;" />
+			<input type="submit" value="News Search" style="font-size: 15pt; font-family:times;" />
+			<input type ="hidden" name="wrapper" value="GuardianWrapper" />
 		</form>
 
         	<div id="left">
