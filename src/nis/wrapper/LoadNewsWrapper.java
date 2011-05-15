@@ -3,10 +3,12 @@ package nis.wrapper;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLConnection;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -88,10 +90,12 @@ public class LoadNewsWrapper implements Wrapper {
 		urlc.setRequestProperty("User-Agent", "Mozilla/4.0");
 		
 		InputStream is = urlc.getInputStream();
-		InputStreamReader ips = new InputStreamReader(is);
+		InputStreamReader ips = new InputStreamReader(is, "UTF-8");
 		BufferedReader in = new BufferedReader(ips);
 		
-		PrintWriter out = res.getWriter();
+		//PrintWriter out = res.getWriter();
+		PrintWriter out = new PrintWriter(new OutputStreamWriter(res.getOutputStream(), "UTF8"), true);
+		
 		
 		String line;
 		Boolean head=false, div=false, foot=false;

@@ -15,7 +15,7 @@
 %>
 		<div style="display: inline;">
 			<a href="<%= flickr.getMediumURL() %>" target="_blank">
-				<img src="<%= flickr.getThumbURL() %>" />
+				<img src="<%= flickr.getThumbURL() %>"  style="border: 1px solid #666; padding: 3px;"/>
 			</a>
 		</div>
 <%

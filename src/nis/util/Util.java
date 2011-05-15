@@ -18,5 +18,4 @@ public class Util {
 	public static String removePunctuation(String input){
 		return input.replaceAll("[ \t\r\n.:,#'\":]", "");
 	}
-	
 }
