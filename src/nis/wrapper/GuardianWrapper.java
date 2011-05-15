@@ -26,6 +26,13 @@ public class GuardianWrapper implements Wrapper {
 		rd.forward(req, res);
 	}
 	
+	private static String parseDate(String date){
+		String day = date.substring(0, 10);
+		String hour = date.substring(11, 19);
+		
+		return day.split("-")[2] + "/" + day.split("-")[1] + "/" + day.split("-")[0] + " (" + hour + ")";  
+	}
+	
 	public static List<News> getNews(String query) throws Exception {
 		List<News> results = new ArrayList<News>();
 		
@@ -60,7 +67,7 @@ public class GuardianWrapper implements Wrapper {
 			results.add(
 				new News(
 					weburl, 
-					date, 
+					parseDate(date), 
 					section, 
 					headline,
 					trail, 

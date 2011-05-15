@@ -74,7 +74,7 @@
 									<%= news.getTrailText() %>
 								</p>
 								<span style="font-size: 8pt;">
-									<%= news.getSection() %> - <%= news.getAuthor() %> - <%= news.getDate() %>
+									<span style="color:#777"><%= news.getSection() %></span> - by <%= news.getAuthor() %> - <%= news.getDate() %>
 								</span>
 							</td>
 						</tr>
