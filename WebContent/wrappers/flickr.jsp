@@ -11,7 +11,7 @@
 <body>
 <%
 	String query = (String) request.getSession().getAttribute("query");
-	for(Flickr flickr : FlickrWrapper.getPhotos(query).subList(0, 50)) {
+	for(Flickr flickr : FlickrWrapper.getPhotosSOAP(query)) {
 %>
 		<div style="display: inline;">
 			<a href="<%= flickr.getMediumURL() %>" target="_blank">
