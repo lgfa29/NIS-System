@@ -7,7 +7,7 @@
 <%@page import="nis.wrapper.GuardianWrapper"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>NIS - <%= request.getSession().getAttribute("newsQuery") %></title>
 
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 

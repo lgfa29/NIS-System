@@ -19,6 +19,22 @@ public class LoadNewsWrapper implements Wrapper {
 		"<script type=\"text/javascript\" src=\"js/jquery.hotkeys.js\"></script>\n" +
 		
 		"<link rel=\"stylesheet\" href=\"js/fancybox/jquery.fancybox-1.3.4.css\" type=\"text/css\" media=\"screen\" />\n" +
+		"<style type=\"text/css\">\n" +
+			"#nis_footer {\n" +
+				"background-color: #cdcdcd;\n" +
+				"text-align: center;\n" +
+				"font-size:10pt;\n" +
+				"color:#1380BA;\n" +
+				"font-family:Verdana;\n" +
+				"padding-top: 5px;\n" +
+				"width: 100%;\n" +
+				"position:fixed;\n" +
+				"left: 0px;\n" +
+				"bottom: 0px;\n" +
+				"z-index: 1000;\n" +
+				"height: 20px;\n" +
+				"}\n" +
+		"</style>"+
 	
 		"<script type=\"text/javascript\">\n" +
 			"function init(){\n" +
@@ -58,6 +74,9 @@ public class LoadNewsWrapper implements Wrapper {
 			"<a id=\"menu\" href=\"menu.jsp\">Menu</a>\n" +
 		"</div>\n";
 	
+	private static String footer =
+		"<div id=\"nis_footer\">Select a piece of the text and press <b>Ctrl + q</b></div>";
+	
 	@Override
 	public void run(HttpServletRequest req, HttpServletResponse res)
 			throws Exception {
@@ -75,10 +94,17 @@ public class LoadNewsWrapper implements Wrapper {
 		PrintWriter out = res.getWriter();
 		
 		String line;
-		Boolean head=false, div=false;
+		Boolean head=false, div=false, foot=false;
 		
 		while((line = in.readLine()) != null){
-			//if(!(line.contains("jquery") || line.contains("jQuery") || line.contains("jQ")))
+			if(line.contains("</body>") && !foot){
+				out.println(footer);
+				foot = true;
+			}
+			
+			if(line.replaceAll("[ \t\r\n]", "").contains("<bodyclass=\"article\">"))
+				out.println("<body class=\"article\" style=\"margin-bottom: 20px;\">");
+			else
 				out.println(line);
 			
 			if(line.contains("<head") && !head){
