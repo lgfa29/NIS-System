@@ -69,7 +69,7 @@
 								</div>
 							<%} %>
 							</td>
-							<td class="trail" style="vertical-align: top; text-align: left;">
+							<td class="trail" style="vertical-align: top; text-align: left; padding-left: 10px;">
 								<p style="">
 									<%= news.getTrailText() %>
 								</p>
@@ -85,6 +85,7 @@
 		%>
 		</ul>
 	</div>
+	<img src="images/poweredbyguardianBLACK.png" />
 </div>
 </body>
 </html>

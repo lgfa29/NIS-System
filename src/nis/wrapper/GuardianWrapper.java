@@ -38,7 +38,7 @@ public class GuardianWrapper implements Wrapper {
 		
 		URL url = new URL(
 				"http://content.guardianapis.com/search?"
-						+ "q=" + query.replaceAll(" ", "+") + "&page-size=15&format=json&show-fields=all");
+						+ "q=" + query.replaceAll(" ", "+") + "&page-size=30&format=json&show-fields=all");
 		URLConnection connection = url.openConnection();
 
 		String line;
