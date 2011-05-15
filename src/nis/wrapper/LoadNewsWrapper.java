@@ -14,22 +14,22 @@ public class LoadNewsWrapper implements Wrapper {
 
 	private final static String header = 
 		"<script type=\"text/javascript\" src=\"js/jquery-1.4.2.js\"></script>\n" +
+		"<script type=\"text/javascript\"> var myjQuery = $.noConflict(true); </script>" +
 		"<script type=\"text/javascript\" src=\"js/fancybox/jquery.fancybox-1.3.4.pack.js\"></script>\n" +
 		"<script type=\"text/javascript\" src=\"js/jquery.hotkeys.js\"></script>\n" +
 		
-		"<link rel=\"stylesheet\" href=\"js/fancybox/jquery.fancybox-1.3.4.css\" type=\"text/css\" media=\"screen\" />\n";
+		"<link rel=\"stylesheet\" href=\"js/fancybox/jquery.fancybox-1.3.4.css\" type=\"text/css\" media=\"screen\" />\n" +
 	
-	private final static String fancybox = 
 		"<script type=\"text/javascript\">\n" +
 			"function init(){\n" +
-				"jQuery(\"a#menu\").fancybox({\n" +
+				"myjQuery(\"a#menu\").fancybox({\n" +
 					"'type':'iframe',\n" + 
 					"'width':650,\n" +
 					"'height':400,\n" +
 					"'scrolling':'no'\n" +
 				"});\n" +
 				
-				"jQuery(document).bind('keydown', 'Ctrl+q',function (evt){\n" +
+				"myjQuery(document).bind('keydown', 'Ctrl+q',function (evt){\n" +
 					"var txt = '';\n" +
 					
 				    "if (window.getSelection)\n" +
@@ -39,20 +39,21 @@ public class LoadNewsWrapper implements Wrapper {
 				    "else if (document.selection)\n" +
 				        "txt = document.selection.createRange().text;\n" +
 			        
-					"jQuery.ajax({\n" +
+					"myjQuery.ajax({\n" +
 						"type:\"GET\",\n" +
 						"url:\"saveQuery\",\n" +
 						"data:\"query=\"+txt,\n" +
 						"success:function(){\n" +
-							"jQuery(\"a#menu\").trigger('click');\n" +
+							"myjQuery(\"a#menu\").trigger('click');\n" +
 						"}\n" +
 					"});\n" +
 				"});\n" +
 			"}\n" +
 			
-			"jQuery(document).ready(init);\n" +
-		"</script>\n" +
-		
+			"myjQuery(document).ready(init);\n" +
+		"</script>\n";
+	
+	private final static String fancybox = 
 		"<div style=\"visibility: hidden\">\n" +
 			"<a id=\"menu\" href=\"menu.jsp\">Menu</a>\n" +
 		"</div>\n";
@@ -74,16 +75,21 @@ public class LoadNewsWrapper implements Wrapper {
 		PrintWriter out = res.getWriter();
 		
 		String line;
+		Boolean head=false, div=false;
 		
 		while((line = in.readLine()) != null){
-			if(!(line.contains("jquery") || line.contains("jQuery")))
+			//if(!(line.contains("jquery") || line.contains("jQuery") || line.contains("jQ")))
 				out.println(line);
 			
-			if(line.contains("<head"))
+			if(line.contains("<head") && !head){
 				out.println(header);
+				head = true;
+			}
 			
-			if(line.contains("<body"))
+			if(line.contains("<body") && !div){
 				out.println(fancybox);
+				div = true;
+			}
 		}
 	}
 
