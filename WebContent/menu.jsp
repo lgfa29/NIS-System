@@ -113,10 +113,10 @@
 		<div id="right">
 			<div id="header">
 				<h1><%= (String) session.getAttribute("query") %></h1>
-				<p id="wrapper">&nbsp;</p>
+				<p id="wrapper">From <b>Google</b></p>
 			</div>
 			<div id="content">
-				<iframe name="iframe" style="width: 99.1%; height: 350px; border: 0;"></iframe>
+				<iframe name="iframe" style="width: 99.1%; height: 350px; border: 0;" src="controller?wrapper=GoogleWrapper"></iframe>
 			</div>
 		</div>
 	</div>

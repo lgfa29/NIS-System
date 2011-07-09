@@ -19,15 +19,17 @@
 	String query = (String) session.getAttribute("query");
 	for(Tweet tweet : TwitterWrapper.search(query)){
 %>
-			<tr>
-				<td style="padding: 5px 0">
-					<img src="<%= tweet.getProfileImageUrl() %>" style="width: 48px; height: 48px;" />
-				</td>
-				<td>
-					<a href="http://twitter.com/<%= tweet.getFromUser() %>" target="_blank"><%= tweet.getFromUser() %></a>
-					<%= TwitterWrapper.getParseTweet(tweet.getText(), query) %>
-				</td>
-			</tr>
+	<tr>
+		<td style="padding: 5px 0">
+			<img src="<%= tweet.getProfileImageUrl() %>" style="width: 48px; height: 48px;" />
+		</td>
+		<td>
+			<a href="http://twitter.com/<%= tweet.getFromUser() %>" target="_blank">
+				<%= tweet.getFromUser() %>
+			</a>
+			<%= TwitterWrapper.getParseTweet(tweet.getText(), query) %>
+		</td>
+	</tr>
 <%
 	}
 %>
