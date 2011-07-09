@@ -3,3 +3,5 @@ Project developed for the CS457 - Web-based Software Development at the Korean A
 To run, just add the "nis.war" file in an Apache Tomcat server instance. Simply copy it to the "webapps" folder located in the installation directory.
 
 Then point your browser to http://[server-address]:[server-port]/nis/ 
+
+A demo can be viewed at http://www.youtube.com/watch?v=yY1Fp4eFpi0
