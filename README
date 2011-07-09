@@ -1,1 +1,5 @@
 Project developed for the CS457 - Web-based Software Development at the Korean Advanced Institute of Science and Technology (KAIST).
+
+To run, just add the "nis.war" file in an Apache Tomcat server instance. Simply copy it to the "webapps" folder located in the installation directory.
+
+Then point your browser to http://[server-address]:[server-port]/nis/ 
